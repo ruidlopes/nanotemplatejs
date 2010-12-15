@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>Nano Template JS - $0</title>
+		<script src="../nanotemplate.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+			window.onload = function() {
+				var title = document.getElementsByTagName("title")[0];
+				title.innerHTML = title.innerHTML.t("HTML tests");
+				
+				var h1 = document.getElementsByTagName("h1")[0];
+				h1.innerHTML = h1.innerHTML.t({title: "A Templated Title"});
+				
+				var ul = document.getElementsByTagName("ul")[0];
+				ul.innerHTML = ul.innerHTML.t([
+					{ url: "http://www.google.com", text: "Google" },
+					{ url: "http://www.twitter.com", text: "Twitter" }
+				]);
+			};
+		</script>
+	</head>
+	<body>
+		<h1>$title</h1>
+		<ul>
+			<li><a href="$url">$text</a></li>
+		</ul>
+	</body>
+</html>

@@ -38,3 +38,11 @@ This library also provides looping capabilities, which can be useful for applyin
 Example:
 
 `"test $0 ".t(["one", "two"])` returns `"test one test two "`
+
+
+# Additional examples
+
+More example usage can be found in the `test` directory of this project:
+
+* `assertions.js` provides insights on the usage of this library, especially in the context of server-side Javascript
+* `example.html` provides some usage scenarios to apply this library directly within HTML files
