@@ -37,4 +37,4 @@ This library also provides looping capabilities, which can be useful for applyin
 
 Example:
 
-`"test $0 ".t(["one", "two"])` returns `"test one test two"`
+`"test $0 ".t(["one", "two"])` returns `"test one test two "`
