@@ -8,4 +8,9 @@ String.prototype.template = String.prototype.t = function() {
 };
 
 if (typeof Element === "function")
-	Element.prototype.template = Element.prototype.t = function() { this.innerHTML = this.innerHTML.t.apply(this.innerHTML, arguments); };
+	Element.prototype.template = Element.prototype.t = function() {
+		if (this._tcache === undefined)
+			this._tcache = this.innerHTML;
+		
+		this.innerHTML = this._tcache.t.apply(this._tcache, arguments);
+	};

@@ -12,6 +12,12 @@
 					{ url: "http://www.google.com", text: "Google" },
 					{ url: "http://www.twitter.com", text: "Twitter" }
 				]);
+				
+				// testing for cached DOM Element template
+				document.getElementsByTagName("ul")[0].t([
+					{ url: "http://www.foo.com", text: "Foo" },
+					{ url: "http://www.bar.com", text: "Bar" }
+				]);
 			};
 		</script>
 	</head>

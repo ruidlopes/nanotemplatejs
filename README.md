@@ -60,13 +60,15 @@ will transform the respective DOM element into:
 
 `<p id='my-element'>lorem ipsum ...</p>`
 
+*Note:* this function can be applied several times to a DOM Element, since DOM Element templates are cached.
+
 
 # Additional examples
 
 More example usage can be found in the `test` directory of this project:
 
-* `assertions.js` provides insights on the usage of this library, especially in the context of server-side Javascript
-* `example.html` provides some usage scenarios to apply this library directly within HTML files
+* `assertions.js` provides insights on the usage of this library, especially in the context of server-side Javascript;
+* `example.html` provides some usage scenarios to apply this library directly within HTML documents.
 
 # Cautions
 
