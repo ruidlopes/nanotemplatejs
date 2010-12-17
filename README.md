@@ -40,9 +40,34 @@ Example:
 `"test $0 ".t(["one", "two"])` returns `"test one test two "`
 
 
+## DOM templates
+
+Apart from extending `string` objects, this library allows for direct manipulation of DOM elements, following the same usage pattern:
+
+`element.t(parameters)`
+
+Example:
+
+Assuming the following excerpt of an HTML document:
+
+`<p id='my-element'>$text</p>`
+
+The execution of the following Javascript snippet
+
+`document.getElementById('my-element').t({text: "lorem ipsum ..."})`
+
+will transform the respective DOM element into:
+
+`<p id='my-element'>lorem ipsum ...</p>`
+
+
 # Additional examples
 
 More example usage can be found in the `test` directory of this project:
 
 * `assertions.js` provides insights on the usage of this library, especially in the context of server-side Javascript
 * `example.html` provides some usage scenarios to apply this library directly within HTML files
+
+# Cautions
+
+This library extends the functionalities provided by the String and DOM Element objects. Use with caution, [since it might break some libraries/scripts](http://perfectionkills.com/whats-wrong-with-extending-the-dom/).

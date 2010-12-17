@@ -6,14 +6,9 @@
 		<script src="../nanotemplate.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" charset="utf-8">
 			window.onload = function() {
-				var title = document.getElementsByTagName("title")[0];
-				title.innerHTML = title.innerHTML.t("HTML tests");
-				
-				var h1 = document.getElementsByTagName("h1")[0];
-				h1.innerHTML = h1.innerHTML.t({title: "A Templated Title"});
-				
-				var ul = document.getElementsByTagName("ul")[0];
-				ul.innerHTML = ul.innerHTML.t([
+				document.getElementsByTagName("title")[0].t("HTML tests");
+				document.getElementsByTagName("h1")[0].t({title: "A Templated Title"});
+				document.getElementsByTagName("ul")[0].t([
 					{ url: "http://www.google.com", text: "Google" },
 					{ url: "http://www.twitter.com", text: "Twitter" }
 				]);

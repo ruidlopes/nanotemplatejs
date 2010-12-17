@@ -6,3 +6,6 @@ String.prototype.template = String.prototype.t = function() {
 		return this.replace(/(\$\w+)/g, function(match) { return args[match.substr(1)]; });
 	}
 };
+
+if (typeof Element === "function")
+	Element.prototype.t = function() { this.innerHTML = this.innerHTML.t.apply(this.innerHTML, arguments); };
