@@ -8,4 +8,4 @@ String.prototype.template = String.prototype.t = function() {
 };
 
 if (typeof Element === "function")
-	Element.prototype.t = function() { this.innerHTML = this.innerHTML.t.apply(this.innerHTML, arguments); };
+	Element.prototype.template = Element.prototype.t = function() { this.innerHTML = this.innerHTML.t.apply(this.innerHTML, arguments); };
