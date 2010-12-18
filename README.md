@@ -68,7 +68,7 @@ will transform the respective DOM element into:
 More example usage can be found in the `test` directory of this project:
 
 * `assertions.js` provides insights on the usage of this library, especially in the context of server-side Javascript;
-* `example.html` provides some usage scenarios to apply this library directly within HTML documents.
+* `assertions.html` provides some usage scenarios to apply this library directly within HTML documents.
 
 # Cautions
 
