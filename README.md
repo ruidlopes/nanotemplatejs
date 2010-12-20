@@ -1,6 +1,6 @@
 # Nano Template JS
 
-This tiny Javascript library provides a small addition to the `string` object that allows for simple templating features.
+This tiny Javascript library provides a small addition to the `string` and DOM `Element` objects that allows for simple templating features.
 
 # Usage
 
