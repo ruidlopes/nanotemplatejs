@@ -1,12 +1,12 @@
 (function() {
-	String.prototype._tregex = /(\$\w+)/g;
+	var _tregex = /(\$\w+)/g;
 
 	String.prototype.template = String.prototype.t = function() {
 		if (arguments[0] instanceof Array)
 			return arguments[0].map(this.t, this).join("");
 		else {
 			var args = typeof arguments[0] === "object" ? arguments[0] : arguments;
-			return this.replace(this._tregex, function(match) { return args[match.substr(1)]; });
+			return this.replace(_tregex, function(match) { return args[match.substr(1)]; });
 		}
 	};
 
