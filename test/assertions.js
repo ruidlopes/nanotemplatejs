@@ -3,8 +3,7 @@
 var fs = require("fs");
 var assert = require("assert");
 
-// this eval hack is needed for node.js, since afaik it doesn't allow for extending native objects and expose those features through modules
-eval(fs.readFileSync("../nanotemplate.js", "utf8"));
+require("../nanotemplate.js");
 
 // positional arguments
 assert.equal("simple test".t(), "simple test");
